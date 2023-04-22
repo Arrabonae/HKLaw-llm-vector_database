@@ -15,8 +15,8 @@ The Langchain Conversational Chatbot is a powerful, interactive tool that levera
 Clone the repository and install the required dependencies.
 
 ```bash
-git clone https://github.com/yourusername/langchain-conversational-chatbot.git
-cd langchain-conversational-chatbot
+git clone https://github.com/Arrabonae/HKLaw-llm-vector_database.git
+cd HKLaw-llm-vector_database
 pip install -r requirements.txt
 ```
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 Run the chatbot by executing the main script.
 
 ```bash
-python chatbot.py
+python bot.py
 ```
 
 You will be prompted to enter your OpenAI API key. The chatbot will then start, and you can interact with it by typing your questions. To exit the chatbot, type `exit`. To clear the chat history, type `clear`.
@@ -44,10 +44,6 @@ Example usage with command-line arguments:
 python chatbot.py --verbose --model gpt-3.5-turbo --use-langchain-splitter
 ```
 
-## Contributing
-
-Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) to get started.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
@@ -56,8 +52,7 @@ This project is licensed under the [MIT License](LICENSE.md).
 
 This project is built using the following libraries:
 
-- [OpenAI](https://github.com/openai/openai)
-- [Langchain](https://github.com/langchain/langchain)
-- [Hugging Face Transformers](https://github.com/huggingface/transformers)
+- Langchain
+- Hugging Face
 
 We appreciate the work done by the developers of these libraries to make this chatbot possible.
