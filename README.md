@@ -44,6 +44,9 @@ Example usage with command-line arguments:
 python chatbot.py --verbose --model gpt-3.5-turbo --use-langchain-splitter
 ```
 
+## Screenshot
+![Screenshot](assets/screenshot.png)
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
