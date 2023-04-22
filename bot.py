@@ -10,6 +10,7 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.embeddings import HuggingFaceEmbeddings
 from database import loadOrdinance
 from transformers import GPT2Tokenizer
+from colorama import Fore, init
 
 
 MAX_TOKENS = 3850
@@ -59,11 +60,12 @@ def main():
 
     chat_history = []
     qa = ConversationalRetrievalChain.from_llm(ChatOpenAI(temperature=0, model_name=model, openai_api_key=api_key), vectordb.as_retriever(), return_source_documents=True, verbose=verbose)
-
-    print("Welcome to the Chatbot!")
-    print("Type 'exit' to exit the chatbot or 'clear' to clear the chat history.")
+    
+    init(autoreset=True)
+    print(Fore.CYAN + "Welcome to the Chatbot!")
+    print(Fore.CYAN + "Type 'exit' to exit the chatbot or 'clear' to clear the chat history.")
     while True:
-        query = input("You: ")
+        query = input(Fore.RED + "You: ")
         if query.lower() == "exit":
             break
         if query.lower() == "clear":
@@ -74,7 +76,7 @@ def main():
             result = qa({"question": query, "chat_history": truncated_history})
             chat_history.append((query, result["answer"]))
             source = [doc.metadata['Ordinance'] + ' -> ' + doc.metadata['Article'] for doc in result['source_documents']]
-            print(f"Bot: {result['answer']} \n\n ({' | '.join(source)})")
+            print(Fore.CYAN + f"Bot: {result['answer']} \n\n ({' | '.join(source)})")
             chat_history += [(query, result["answer"])]
 
 if __name__ == "__main__":
