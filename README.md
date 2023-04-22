@@ -46,7 +46,7 @@ python chatbot.py --verbose --model gpt-3.5-turbo --use-langchain-splitter
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
