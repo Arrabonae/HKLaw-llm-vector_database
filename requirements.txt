@@ -3,3 +3,4 @@ langchain
 tiktoken
 chromadb
 pyllamacpp
+colorama
