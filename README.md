@@ -45,7 +45,7 @@ python chatbot.py --verbose --model gpt-3.5-turbo --use-langchain-splitter
 ```
 
 ## Screenshot
-![Screenshot](assets/screenshot.png)
+![Screenshot](assets/Screenshot.png)
 
 ## License
 
